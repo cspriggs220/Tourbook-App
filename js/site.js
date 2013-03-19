@@ -8,42 +8,48 @@ $(document).ready(function(){
       right: ''
     },
     defaultView: 'month',
+    aspectRatio: 2,
     allDayDefault: false,
     editable: false,
+
+    //Plugin call to pull data from Backlift
     events: function(start,end,callback) {
       $.ajax({
         url: '/backliftapp/show',
         type: 'GET',
         datatype: 'JSON',
-        success: function(object) {
-          var events = [];
-          $(object).find('event').each(function(){
-            events.push({
-            event.allDay = event.allDay == "true"
-            });
-          });
-          callback(events);
-        };
-      });
-    };, //end events function
+        success: function(shows) { 
 
-    // success functiion goes here, with events callback
+        //iterate through each object within shows array and change
+        //the value of .allDay to a boolean
+          // $.each(shows, function(){
+          //   $.each(this, function(key, value){
+          //   key.allDay = (key.allDay == false);
+          //   });//end .each
+          // });//end .each
 
+          callback(shows);
+        }//end success
+      })//end GET
+    }, //end events function
 
-    // Prints show values when an Event is Clicked
+    // Prints day view + show values when an Event is Clicked
     eventClick: function(calEvent, view, allDay) {
 
+        // Show new calendar on right side of page
         $('#iTable').fullCalendar({
 
             defaultView: 'agendaDay',
+            allDayDefault: false,
             editable: false,
             events: {
                 url: "/backliftapp/show",
                 type: "GET",
                 datatype: "JSON"
             }
-
         })
+
+        // Changes the new calendar to view current date
         $('#iTable').fullCalendar('gotoDate', new Date(calEvent.start));
 
         // Prints hotel and map info to page
