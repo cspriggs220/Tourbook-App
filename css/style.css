@@ -1,0 +1,41 @@
+body {
+	padding-top: 60px;
+	padding-bottom: 40px;
+}
+
+img {
+	/*margin: 0 auto;*/
+}
+
+.maincontent {
+	height: 400px;
+}
+
+.jumbotron {
+	text-align: center;
+	height: 150px;
+	padding-top: 60px;
+	/*background: url("../img/jumbotron.png") repeat center center;*/
+
+  /*position: relative;
+  z-index: 2;
+  
+  background-size: 150px 150px;*/
+}
+
+/*.jumbotron:after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: url(img/jumbotron.png) repeat center center;
+  opacity: .4;
+}
+
+.jumbotron:after {
+    background-size: 150px 150px;
+  }*/
+

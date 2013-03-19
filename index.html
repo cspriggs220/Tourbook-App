@@ -1,0 +1,163 @@
+<!DOCTYPE>
+<html lang="en">
+<head>
+
+  <meta charset="UTF-8">
+  <title>Tour Manager</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- stylesheets -->
+  <link rel='stylesheet' type='text/css' href='css/fullcalendar.css'>
+  <link href="css/bootstrap.css" rel="stylesheet" media="screen">
+  <link href="css/bootstrap-responsive.css" rel="stylesheet" media="screen">
+  <link href="css/style.css" type="text/css" rel="stylesheet">
+
+  <!-- JS -->
+  <script type='text/javascript' src="js/jquery-1.9.0.min.js"></script>
+  <script type='text/javascript' src="js/bootstrap.min.js"></script>
+  <script type='text/javascript' src='js/fullcalendar.js'></script>
+  <script type='text/javascript' src="js/site.js"></script>
+  <script type='text/javascript' src="js/functions.js"></script>
+  <script type='text/javascript' src="js/gcal.js"></script>
+
+
+</head>
+<body>
+
+<!-- Navigation -->
+<div class="navbar navbar-inverse navbar-fixed-top">
+  <div class="navbar-inner">
+    <div class="container-fluid">
+      <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="brand" href="#">Tourbook</a>
+      <div class="nav-collapse collapse">
+        <!-- <p class="navbar-text pull-right"> -->
+          <!-- <a href="#login" class=>Manager Log-In</a> -->
+
+          <!-- Button to trigger modal -->
+        <a href="#myModal" role="button" class="navbar-link pull-right btn" data-toggle="modal">Management Log-In</a>
+         
+        <!-- Modal -->
+        <div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+              <h3 id="myModalLabel">New Show Info</h3>
+            </div>
+            <div class="modal-body">
+              <!-- Form Draft -->
+            <form id="form" class="form-horizontal">
+              <div class="control-group">
+                <label class="control-label" for="date">Date:</label>
+                <div class="controls">
+                  <input type="text" id="inputDate" class="newShow_inputs required" name="name" placeholder="DD/MM/YY" maxlength="30">
+                </div>
+              </div>  
+              <div class="control-group">
+                <label class="control-label" for="venueName">Venue Name:</label>
+                <div class="controls">
+                  <input type="text" id="inputVenueName" class="newShow_inputs required" name="name" placeholder="Ex. Madison Square Garden">
+                </div>
+              </div>
+              <div class="control-group">
+                <label class="control-label" for="venueAddress" value="address">Address:</label>
+                <div class="controls">
+                  <input type="text" id="inputAddress" class="newShow_inputs required" name="address" placeholder="Ex. 4 Pennsylvania Plaza">
+                </div>
+              </div>
+              <div class="control-group">
+                <label class="control-label" for="venueCity" value="city">City:</label>
+                <div class="controls">
+                  <input type="text" id="inputCity" class="newShow_inputs required" name="city" placeholder="New York">
+                </div>
+              </div>
+              <div class="control-group">
+                <label class="control-label" for="venueState" value="state">State:</label>
+                <div class="controls">
+                  <input type="text" id="inputState" class="newShow_inputs required" name="state" placeholder="Ex. NY">
+                </div>
+              </div>
+              <div class="control-group">
+                <label class="control-label" for="zip" value="zip">ZIP code:</label>
+                <div class="controls">
+                  <input type="text" id="zip" class="team_inputs required" name="number" placeholder="Ex. 90193" maxlength="5">
+                </div>
+              </div>
+            </form>
+            </div>
+            <div class="modal-footer">
+              <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+              <button id="addteam" class="btn btn-primary submit" type="submit" data-dismiss="modal" aria-hidden="true">Add Show</button>
+            </div>
+          </div> <!-- End Modal -->
+      </div><!--/.nav-collapse -->
+    </div>
+  </div>
+</div>
+
+<!-- Subhead -->
+<!-- Maybe make a carousel or other image here -->
+<header class="jumbotron subhead">
+  <div class="container-fluid">
+    <h1>Make a Move Tour</h1>
+  </div>
+</header>
+
+<!-- Body Container -->
+<div class="container-fluid">
+  <div class="row-fluid">
+
+    <!-- Sidebar on Left -->
+    <div class="span5 well well-large">
+      <img src="img/poster.png" class="img-polaroid">
+      <hr>
+      <div id="calendar">
+      <!-- insert calendar here using JS -->
+      </div>
+    </div><!-- End Sidebar -->
+
+    <!-- Hero Unit on Right -->
+    <div id="heroBackground" class="span7">
+      <div class="hero-unit maincontent">
+        <div class="row-fluid">
+          <!-- Tabs -->
+          <div id="tabButton" class="span12">
+            <div class="tabbable tabs-left">
+              <ul class="nav nav-tabs">
+                <li class="active"><a href="#iTable" data-toggle="tab"><i class="icon-calendar"></i> Itinerary</a></li>
+                <li><a href="#hotelInfo" data-toggle="tab"><i class="icon-home"></i> Hotel</a></li>
+                <li><a href="#mapImage" data-toggle="tab"><i class="icon-map-marker"></i> Map</a></li>
+              </ul>
+              <!-- tab content -->
+              <div class="tab-content">
+                
+                  <div class="tab-pane active" id="iTable">
+                    <!-- Itinierary goes here -->
+                  </div>
+                  <div class="tab-pane" id="hotelInfo">
+                    <!-- Hotel info goes here -->
+                  </div>
+                  <div class="tab-pane" id="mapImage">
+                    <!-- Map goes here -->
+                  </div>
+
+              </div><!-- end tab content -->
+            </div>
+          </div><!-- end tabs -->
+        </div>
+      </div>
+    </div><!-- end Hero -->
+
+  </div><!-- end row -->
+
+<footer>
+
+</footer>
+
+</div><!-- end Body Container -->
+
+</body>
+</html>
