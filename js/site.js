@@ -8,7 +8,6 @@ $(document).ready(function(){
       right: ''
     },
     defaultView: 'month',
-    aspectRatio: 2,
     allDayDefault: false,
     editable: false,
 
@@ -19,15 +18,6 @@ $(document).ready(function(){
         type: 'GET',
         datatype: 'JSON',
         success: function(shows) { 
-
-        //iterate through each object within shows array and change
-        //the value of .allDay to a boolean
-          // $.each(shows, function(){
-          //   $.each(this, function(key, value){
-          //   key.allDay = (key.allDay == false);
-          //   });//end .each
-          // });//end .each
-
           callback(shows);
         }//end success
       })//end GET
@@ -36,12 +26,19 @@ $(document).ready(function(){
     // Prints day view + show values when an Event is Clicked
     eventClick: function(calEvent, view, allDay) {
 
+        // Clear out div upon each click
+        $('#iTable').html('');
         // Show new calendar on right side of page
         $('#iTable').fullCalendar({
-
+            header: {
+              left: '',
+              center: 'title',
+              right: ''
+            },
             defaultView: 'agendaDay',
             allDayDefault: false,
             editable: false,
+            firstHour: 8,
             events: {
                 url: "/backliftapp/show",
                 type: "GET",
