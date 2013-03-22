@@ -2,7 +2,7 @@
 <hr>
 <p>This is my personal capstone project for the Nashville Software School. I'm building an app for use by touring musicians; to provide a convenient place to view information regarding all upcoming shows.</p>
 <p>This app can be viewed at: https://tourbook-ich4w.backliftapp.com/</p>
-<h5>This project is currently incomplete.</h5><hr><em>This app currently focuses on the UX of an artist, and how they can access data. Implementation of admin tools is part of the future plans.</em><hr>
+<h5>This project is currently incomplete.</h5><hr>
 <h3>Phase One: <em>(completed)</em></h3>
 <ul>
   <li>Brainstorm and map out the gameplan for phase 1 using Trello.</li>
