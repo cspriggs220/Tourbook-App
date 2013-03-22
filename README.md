@@ -2,7 +2,7 @@
 <hr>
 <p>This is my personal capstone project for the Nashville Software School. I'm building an app for use by touring musicians; to provide a convenient place to view information regarding all upcoming shows.</p>
 <p>This app can be viewed at: https://tourbook-ich4w.backliftapp.com/</p>
-<h5>This project is currently incomplete.</h5><hr><em>This app currently focuses on the UX of an artist, and how they can access data. Implementation of admin tools is part of the future plans.</em><hr>
+<h5>This project is currently incomplete.</h5><hr>
 <h3>Phase One: <em>(completed)</em></h3>
 <ul>
   <li>Brainstorm and map out the gameplan for phase 1 using Trello.</li>
@@ -24,8 +24,7 @@
 <ul>
   <li>Brainstorm and map out the gameplan for phase 3 using Trello.</li>
   <li>Research the usability of a Google API, which will allow the user to view the location of each day's venue and surrounding area.</li>
-  <li>Add addresses to show collection for use with mapping API.</li>
-  <li>Research a text/SMS messaging API that will allow convenient communication for all users tied to the same "account". (<em>Most likely a future addition.</em>)</li>
+  <li>Build "management/admin" data entry aspect of the app, which will allow for two-way functionality.  As shows get booked, this will allow management to populate the app with events and their corresponding information.</li>
   <li>Implement APIs with show collection data.</li>
   <li>Fix bugs associated with API implementation.</li>
 </ul>
@@ -38,7 +37,7 @@
 </ul>
 <h3>Future plans for app: </h3>
 <ul>
-  <li>Build "management/admin" aspects of the app, which will allow for two-way functionality.  As shows get booked, this will allow management to populate the app with events and their corresponding information.</li>
+  <li>Research a text/SMS messaging API that will allow convenient communication for all users tied to the same "account".</li>
   <li>Build login-in page for management and artist.</li>
   <li>Yelp/Urbanspoon type API for location based information regarding restaurants.</li>
   <li>API to show local music stores for supplies/rental/purchase purposes.</li>
