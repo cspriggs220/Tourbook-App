@@ -40,59 +40,82 @@
           <!-- <a href="#login" class=>Manager Log-In</a> -->
 
           <!-- Button to trigger modal -->
-        <a href="#myModal" role="button" class="navbar-link pull-right btn" data-toggle="modal">Management Log-In</a>
+        <a href="#myModal" role="button" class="navbar-link pull-right btn" data-toggle="modal">Add Event</a>
          
         <!-- Modal -->
         <div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
             <div class="modal-header">
               <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-              <h3 id="myModalLabel">New Show Info</h3>
+              <h3 id="myModalLabel">New Event Info</h3>
             </div>
             <div class="modal-body">
               <!-- Form Draft -->
-            <form id="form" class="form-horizontal">
+            <form id="form" class="form-horizontal error">
               <div class="control-group">
                 <label class="control-label" for="date">Date:</label>
                 <div class="controls">
-                  <input type="text" id="inputDate" class="newShow_inputs required" name="name" placeholder="DD/MM/YY" maxlength="30">
+                  <input type="text" id="inputDate" class="newShow_inputs input-small" required name="name" placeholder="DD/MM/YYYY" maxlength="10">
                 </div>
+              </div>
+              <div class="control-group">
+                  <label class="control-label" for="venueInfo"><h4>Venue Info</h4></label>
               </div>  
               <div class="control-group">
-                <label class="control-label" for="venueName">Venue Name:</label>
+                <label class="control-label" for="venueName">Name:</label>
                 <div class="controls">
-                  <input type="text" id="inputVenueName" class="newShow_inputs required" name="name" placeholder="Ex. Madison Square Garden">
+                  <input type="text" id="inputVenueName" class="newShow_inputs" required name="name" placeholder="Ex. Madison Square Garden">
                 </div>
               </div>
               <div class="control-group">
                 <label class="control-label" for="venueAddress" value="address">Address:</label>
                 <div class="controls">
-                  <input type="text" id="inputAddress" class="newShow_inputs required" name="address" placeholder="Ex. 4 Pennsylvania Plaza">
+                  <input type="text" id="inputAddress" class="newShow_inputs" required name="address" placeholder="Ex. 4 Pennsylvania Plaza">
                 </div>
               </div>
               <div class="control-group">
-                <label class="control-label" for="venueCity" value="city">City:</label>
+                <label class="control-label" for="venueCity" value="city">City/State/ZIP:</label>
                 <div class="controls">
-                  <input type="text" id="inputCity" class="newShow_inputs required" name="city" placeholder="New York">
+                  <input type="text" id="inputVenueCity" class="newShow_inputs input-small" required name="city" placeholder="Ex. New York">
+                  <input type="text" id="inputVenueState" class="newShow_inputs input-mini" required name="state" placeholder="Ex. NY" maxlength="2">
+                  <input type="text" id="inputZip" class="team_inputs input-mini" required name="number" placeholder="Ex.90193" maxlength="5">
                 </div>
               </div>
               <div class="control-group">
-                <label class="control-label" for="venueState" value="state">State:</label>
+                  <label class="control-label" for="hotelInfo"><h4>Hotel Info</h4></label>
+              </div>  
+              <div class="control-group">
+                <label class="control-label" for="hotelName">Name:</label>
                 <div class="controls">
-                  <input type="text" id="inputState" class="newShow_inputs required" name="state" placeholder="Ex. NY">
+                  <input type="text" id="inputHotelName" class="newShow_inputs" required name="name" placeholder="Ex. The Westin New York">
                 </div>
               </div>
               <div class="control-group">
-                <label class="control-label" for="zip" value="zip">ZIP code:</label>
+                <label class="control-label" for="hotelAddress" value="address">Address:</label>
                 <div class="controls">
-                  <input type="text" id="zip" class="team_inputs required" name="number" placeholder="Ex. 90193" maxlength="5">
+                  <input type="text" id="inputHotelAddress" class="newShow_inputs" required name="address" placeholder="Ex. 270 W 43rd St.">
+                </div>
+              </div>
+              <div class="control-group">
+                <label class="control-label" for="hotelCity" value="city">City/State:</label>
+                <div class="controls">
+                  <input type="text" id="inputHotelCity" class="newShow_inputs input-small" required name="city" placeholder="Ex. New York">
+                  <input type="text" id="inputHotelState" class="newShow_inputs input-mini" required name="state" placeholder="Ex. NY" maxlength="2">
                 </div>
               </div>
             </form>
             </div>
             <div class="modal-footer">
+              <div class="btn-group pull-left">
+                <button class="btn btn-info dropdown-toggle" data-toggle="dropdown">Choose Itinerary <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu">
+                  <li class="text-left"><a href="#">Default Itinerary</a></li>
+                  <li class="text-left disabled"><a href="#">Custom Itinerary</a></li>
+                </ul>
+              </div><!-- end btn group -->
               <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
-              <button id="addteam" class="btn btn-primary submit" type="submit" data-dismiss="modal" aria-hidden="true">Add Show</button>
-            </div>
+              <button id="addEvent" class="btn btn-primary submit" type="submit" data-dismiss="modal" aria-hidden="true">Add Event</button>
+            </div><!-- End footer-->
           </div> <!-- End Modal -->
       </div><!--/.nav-collapse -->
     </div>
