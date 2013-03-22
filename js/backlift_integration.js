@@ -39,7 +39,7 @@ function viewShow(calEvent, view, allDay) {
 
         // Prints hotel and map info to page
         $("#hotelInfo").html('Hotel Info: ' + '<br>' + calEvent.hotelName + '<br>' + calEvent.hotelAddress + '<br>' + calEvent.venueCity + ', ' + calEvent.venueState);
-        $("#mapImage").html("Googel API goes here!");
+        // $("#mapImage").html("Googel API goes here!");
 
         // change the border color just for fun
         $(this).css('border-color', 'red');
