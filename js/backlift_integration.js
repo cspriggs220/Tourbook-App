@@ -8,7 +8,7 @@ function getEvents(start,end,callback) {
           callback(shows);
         }//end success
       })//end GET
-    } //end events function
+} //end events function
 
 //********* Prints day view + show values when an Event is Clicked ************
 
@@ -44,4 +44,4 @@ function viewShow(calEvent, view, allDay) {
         // change the border color just for fun
         $(this).css('border-color', 'red');
 
-    }//end eventClick
+}//end viewShow

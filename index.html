@@ -8,8 +8,10 @@
 
   <!-- stylesheets -->
   <link rel='stylesheet' type='text/css' href='css/fullcalendar.css'>
-  <link href='css/bootstrap.css' rel='stylesheet' media='screen'>
-  <link href='css/bootstrap-responsive.css' rel='stylesheet' media='screen'>
+  <link rel='stylesheet' type='text/css' href='css/bootstrap.css' media='screen'>
+  <link href='css/bootstrap-responsive.min.css' rel='stylesheet' media='screen'>
+  <link href='css/datepicker.css' rel='stylesheet' media='screen'>
+  <link href='css/bootstrap-timepicker.min.css' rel='stylesheet' media='screen'>
   <link href='css/style.css' type='text/css' rel='stylesheet'>
 
   <!-- JS -->
@@ -17,9 +19,10 @@
   <script type='text/javascript' src='//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js'></script>
   <script type='text/javascript' src='js/bootstrap.min.js'></script>
   <script type='text/javascript' src='js/fullcalendar.js'></script>
-  <script type='text/javascript' src='js/backlift_integration.js'></script>
+  <script type='text/javascript' src='js/bootstrap-timepicker.js'></script>
+  <script type='text/javascript' src='js/bootstrap-datepicker.js'></script>
   <script type='text/javascript' src='js/site.js'></script>
-  <script type='text/javascript' src='js/gcal.js'></script>
+  <script type='text/javascript' src='js/backlift_integration.js'></script>
 
 
 </head>
@@ -52,9 +55,42 @@
               <!-- Form Draft -->
             <form id="form" class="form-horizontal error">
               <div class="control-group">
+                <label class="control-label" for="eventTitle"><h4>Event Title</h4></label>
+              </div>
+              <div class="controls">
+                  <input type="text" id="inputTitle" class="newShow_inputs" required name="title" placeholder="Ex. New York">
+              </div>
+              <div class="control-group">
+                <label class="control-label" for="showInfo"><h4>Show Info</h4></label>
+              </div>
+              <div class="control-group">
                 <label class="control-label" for="date">Date:</label>
+                <div class='controls'>
+                  <div class="input-append date" id='dp1' data-date='03-26-2013' data-date-format='mm/dd/yyyy' required>
+                    <!-- Date Picker plugin -->
+                    <input type='text' id="datePicker" placeholder='03-26-2013' class='newShow_inputs span2' readonly>
+                    <span class='add-on'><i class='icon-calendar'></i></span>
+                  </div>
+                </div>
+              </div>
+              <div class="control-group">
+                <label class="control-label" for="showStart">Show Start:</label>
                 <div class="controls">
-                  <input type="text" id="inputDate" class="newShow_inputs input-small" required name="name" placeholder="DD/MM/YYYY" maxlength="10">
+                  <div class='input-append bootstrap-timepicker'>
+                    <!-- input Time Picker here -->
+                    <input class='input-small span2' id='timeStart' type='text' value='07:00 PM'>
+                    <span class='add-on'><i class='icon-time'></i></span>
+                  </div>
+                </div>
+              </div>
+              <div class="control-group">
+                <label class="control-label" for="showEnd">Show End:</label>
+                <div class="controls">
+                  <div class='input-append bootstrap-timepicker'>
+                    <!-- input Time Picker here -->
+                      <input class='input-small span2' id='timeEnd' type='text' value='09:00 PM'>
+                      <span class='add-on'><i class='icon-time'></i></span>
+                  </div>
                 </div>
               </div>
               <div class="control-group">
@@ -77,7 +113,7 @@
                 <div class="controls">
                   <input type="text" id="inputVenueCity" class="newShow_inputs input-small" required name="city" placeholder="Ex. New York">
                   <input type="text" id="inputVenueState" class="newShow_inputs input-mini" required name="state" placeholder="Ex. NY" maxlength="2">
-                  <input type="text" id="inputZip" class="team_inputs input-mini" required name="number" placeholder="Ex.90193" maxlength="5">
+                  <input type="text" id="inputZIP" class="newShow_inputs input-mini" required name="number" placeholder="Ex.90193" maxlength="5">
                 </div>
               </div>
               <div class="control-group">
@@ -104,17 +140,17 @@
               </div>
             </form>
             </div>
-            <div class="modal-footer">
-              <div class="btn-group pull-left">
-                <button class="btn btn-info dropdown-toggle" data-toggle="dropdown">Choose Itinerary <span class="caret"></span>
+            <div class="modal-footer controls controls-row">
+              <button class="btn span1" data-dismiss="modal" aria-hidden="true">Close</button>
+              <div class="btn-group span3">
+                <button class="btn btn-info dropdown-toggle" data-toggle="dropdown">Default Itinerary <span class="caret"></span>
                 </button>
                 <ul class="dropdown-menu">
-                  <li class="text-left"><a href="#">Default Itinerary</a></li>
+                  <li class="text-left active"><a href="#">Default Itinerary</a></li>
                   <li class="text-left disabled"><a href="#">Custom Itinerary</a></li>
                 </ul>
               </div><!-- end btn group -->
-              <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
-              <button id="addEvent" class="btn btn-primary submit" type="submit" data-dismiss="modal" aria-hidden="true">Add Event</button>
+              <button id="addEvent" class="span2 btn btn-primary submit" type="submit" data-dismiss="modal" aria-hidden="true">Add Event</button>
             </div><!-- End footer-->
           </div> <!-- End Modal -->
       </div><!--/.nav-collapse -->

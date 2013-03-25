@@ -110,7 +110,6 @@ img {
 #map_canvas img,
 .google-maps img {
   max-width: none;
-  height: 100%;
 }
 
 button,
@@ -249,7 +248,6 @@ a:focus {
 }
 
 .img-polaroid {
-  margin: -5px;
   padding: 4px;
   background-color: #fff;
   border: 1px solid #ccc;
@@ -4407,9 +4405,9 @@ input[type="submit"].btn.btn-mini {
 .navbar .brand {
   display: block;
   float: left;
-  padding: 15px 20px 10px 40px;
+  padding: 10px 20px 10px;
   margin-left: -20px;
-  font-size: 50px;
+  font-size: 20px;
   font-weight: 200;
   color: #777777;
   text-shadow: 0 1px 0 #ffffff;
@@ -4831,7 +4829,6 @@ input[type="submit"].btn.btn-mini {
 
 .navbar-inverse .navbar-link {
   color: #999999;
-  margin-top: 8px;
 }
 
 .navbar-inverse .navbar-link:hover,
@@ -6112,14 +6109,12 @@ a.badge:focus {
 }
 
 .hero-unit {
-  padding: 30px;
+  padding: 60px;
   margin-bottom: 30px;
   font-size: 18px;
   font-weight: 200;
   line-height: 30px;
   color: inherit;
-  /*background-image: url("../img/poster.png");*/
-  /*background-size: 587px 460px;*/
   background-color: #eeeeee;
   -webkit-border-radius: 6px;
      -moz-border-radius: 6px;
