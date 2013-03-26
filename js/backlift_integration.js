@@ -12,7 +12,7 @@ function getEvents(start,end,callback) {
 
 //********* Prints day view + show values when an Event is Clicked ************
 
-function viewShow(calEvent, view, allDay) {
+function viewShow(calEvent, view, allDay,callback) {
 
         // Clear out div upon each click
         $('#iTable').html('');
@@ -20,19 +20,18 @@ function viewShow(calEvent, view, allDay) {
         $('#iTable').fullCalendar({
             header: {
               left: '',
-              center: 'title',
+              center: '',
               right: ''
             },
             defaultView: 'agendaDay',
             allDayDefault: false,
             editable: false,
-            firstHour: 8,
-            events: {
-                url: "/backliftapp/show",
-                type: "GET",
-                datatype: "JSON"
+            firstHour: 11,
+            contentHeight: 400,
+            events: function(start,end,callback) {
+              callback(calEvent.itinerary);
             }
-        })
+        });
 
         // Changes the new calendar to view current date
         $('#iTable').fullCalendar('gotoDate', new Date(calEvent.start));
