@@ -2,6 +2,7 @@
 <hr>
 <p>This is my personal capstone project for the Nashville Software School. I'm building an app for use by touring musicians; to provide a convenient place to view information regarding all upcoming shows.</p>
 <p>This app can be viewed at: https://tourbook-ich4w.backliftapp.com/</p>
+<p><em>I would also like to thank my mentor Pete Brumm for his patience, direction, and wisdom in helping me build this app.</em></p>
 <h5>This project is currently incomplete.</h5><hr>
 <h3>Phase One: <em>(completed)</em></h3>
 <ul>
