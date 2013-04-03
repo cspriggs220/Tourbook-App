@@ -1,75 +1,10 @@
 $(document).ready(function(){
-  
+
+// Google Map API variables
   var geocoder;
   var address;
   var map;
-
-//********** Google Maps API *******************
-
-  //object to store map properties
-  function initialize() {
-    geocoder = new google.maps.Geocoder();
-    var myLocation = new google.maps.LatLng(40.750556, -73.993611);
-    var mapOptions = {
-      center: myLocation,
-      zoom:13,
-      mapTypeId: google.maps.MapTypeId.ROADMAP
-    };
-
-
-    var map = new google.maps.Map(document.getElementById("map_canvas"), mapOptions);
-    // google.maps.event.trigger(map, 'resize');
-    // get current center of map to be resized 
-    var currentCenter = map.getCenter();
-
-    $('a[href="#mapContainerTab"]').on('shown', function(e){
-        google.maps.event.trigger(map, 'resize');
-        // re-Center the map due to hidden tab div
-        map.setCenter(currentCenter);
-    });
-
-    var marker = new google.maps.Marker({
-      position: myLocation,
-      title:'Click to zoom',
-      map: map
-    });
-
-    marker.setMap(map);
-
-    // Zoom to 17 when clicking on marker
-    google.maps.event.addListener(marker,'click',function() {
-      map.setZoom(17);
-      map.setCenter(marker.getPosition());
-    });
-
-  };//end initialize
-
-
-  function getGeoCode(callback) {
-    var address = $('#inputAddress').val();
-    geocoder.geocode( {'address': address}, function(results,status){
-      if (status == google.maps.GeocoderStatus.OK) {
-        callback(results[0].geometry.location.lat(), results[0].geometry.location.lng() );
-        // alert("latitude : " + results[0].geometry.location.lat() );
-        // alert("longitude : " + results[0].geometry.location.lng() );
-        map.setCenter(results[0].geometry.location);
-        var marker = new google.maps.Marker({
-          map: map,
-          position: results[0].geometry.location
-        });
-        // console.log(results[0].geometry.location);
-      } else {
-        alert('Geocode was not successful for the following reason: ' + status);
-      }
-    });//end geocoder
-  }//end getGeoCode
-
-
-  google.maps.event.addDomListener(window, 'load', initialize);
-
-
 //********** Date Picker Plugin ***********************
-
   $('#dp1').datepicker();
 
 //********** Time Picker Plugin ***********************
@@ -94,7 +29,6 @@ $(document).ready(function(){
   })//end time End
 
 //********* Create Event and send data to Backlift ****************
-
   //Add Event Submit Click
   $('#addEvent').on('click', function(){
 
@@ -103,7 +37,7 @@ $(document).ready(function(){
     var dateVal = date.split(/[/]/);
     // var eventDate = new Date(date).toJSON();
 
-    //variable to store date and time values
+    //variable to store showtime date and time values
     var startVal = $('#timeStart').val();
     var endVal = $('#timeEnd').val();
 
@@ -161,6 +95,7 @@ $(document).ready(function(){
       dinnerEnd[0] += 12
     }
 
+    // googleMaps call
     getGeoCode(function (lat, lng){
 
         //send data to Backlift
@@ -176,7 +111,6 @@ $(document).ready(function(){
                   title: "Showtime",
                   start: new Date(dateVal[2],dateVal[0]-1,dateVal[1],timeStart[0]-5,timeStart[1]),
                   end: new Date(dateVal[2],dateVal[0]-1,dateVal[1],timeEnd[0]-5,timeEnd[1])
-
                 },
                 {
                   title: "Lunch",
@@ -193,7 +127,6 @@ $(document).ready(function(){
                   start: new Date(dateVal[2],dateVal[0]-1,dateVal[1],dinnerStart[0]-5,dinnerStart[1]),
                   end: new Date(dateVal[2],dateVal[0]-1,dateVal[1],dinnerEnd[0]-5,dinnerEnd[1])
                 }
-
               ],
               geocode: [lat,lng],
               venueName: $('#inputVenueName').val(),
@@ -207,9 +140,7 @@ $(document).ready(function(){
             $('#calendar').fullCalendar('refetchEvents');
           }
         });//end POST
-
     });//end getGeoCode
-
   });//end click
 
 //********** jQuery Calendar Plugin *******************
