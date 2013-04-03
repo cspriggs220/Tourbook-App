@@ -16,11 +16,13 @@
 
   <!-- JS -->
   <script type='text/javascript' src='https://maps.googleapis.com/maps/api/js?key=AIzaSyCV3WgLFFfvqaCj1-VLVB3r7ahXBRNm9_E&sensor=false'></script>
+  <!--<script src="https://maps.google.com/maps?file=api&amp;v=3&amp;sensor=false&amp;key=AIzaSyCV3WgLFFfvqaCj1-VLVB3r7ahXBRNm9_E" type="text/javascript"></script>-->
   <script type='text/javascript' src='//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js'></script>
   <script type='text/javascript' src='js/bootstrap.min.js'></script>
   <script type='text/javascript' src='js/fullcalendar.js'></script>
   <script type='text/javascript' src='js/bootstrap-timepicker.js'></script>
   <script type='text/javascript' src='js/bootstrap-datepicker.js'></script>
+  <!-- <script type='text/javascript' src='js/googleMap.js'></script> -->
   <script type='text/javascript' src='js/site.js'></script>
   <script type='text/javascript' src='js/backlift_integration.js'></script>
 
@@ -105,17 +107,17 @@
               <div class="control-group">
                 <label class="control-label" for="venueAddress" value="address">Address:</label>
                 <div class="controls">
-                  <input type="text" id="inputAddress" class="newShow_inputs" required name="address" placeholder="Ex. 4 Pennsylvania Plaza">
+                  <input type="text" id="inputAddress" class="newShow_inputs" required name="address" placeholder="Ex. 4 Pennsylvania Plaza New York, NY">
                 </div>
               </div>
-              <div class="control-group">
+             <!--  <div class="control-group">
                 <label class="control-label" for="venueCity" value="city">City/State/ZIP:</label>
                 <div class="controls">
                   <input type="text" id="inputVenueCity" class="newShow_inputs input-small" required name="city" placeholder="Ex. New York">
                   <input type="text" id="inputVenueState" class="newShow_inputs input-mini" required name="state" placeholder="Ex. NY" maxlength="2">
                   <input type="text" id="inputZIP" class="newShow_inputs input-mini" required name="number" placeholder="Ex.90193" maxlength="5">
                 </div>
-              </div>
+              </div> -->
               <div class="control-group">
                   <label class="control-label" for="hotelInfo"><h4>Hotel Info</h4></label>
               </div>  
@@ -128,16 +130,16 @@
               <div class="control-group">
                 <label class="control-label" for="hotelAddress" value="address">Address:</label>
                 <div class="controls">
-                  <input type="text" id="inputHotelAddress" class="newShow_inputs" required name="address" placeholder="Ex. 270 W 43rd St.">
+                  <input type="text" id="inputHotelAddress" class="newShow_inputs" required name="address" placeholder="Ex. 270 W 43rd St. New York,NY">
                 </div>
               </div>
-              <div class="control-group">
+              <!-- <div class="control-group">
                 <label class="control-label" for="hotelCity" value="city">City/State:</label>
                 <div class="controls">
                   <input type="text" id="inputHotelCity" class="newShow_inputs input-small" required name="city" placeholder="Ex. New York">
                   <input type="text" id="inputHotelState" class="newShow_inputs input-mini" required name="state" placeholder="Ex. NY" maxlength="2">
                 </div>
-              </div>
+              </div> -->
             </form>
             </div>
             <div class="modal-footer controls controls-row">
@@ -161,8 +163,8 @@
 <!-- Subhead -->
 <!-- Maybe make a carousel or other image here -->
 <header class="jumbotron subhead">
-  <div class="container-fluid">
-    <h1>Make a Move Tour</h1>
+  <div class="container-fluid" id='subhead'>
+    <h1>Spring 2013  ||  Make a Move Tour</h1>
   </div>
 </header>
 
@@ -189,7 +191,7 @@
             <div class="tabbable tabs-left">
               <ul class="nav nav-tabs">
                 <li class="active"><a href="#iTable" data-toggle="tab"><i class="icon-calendar"></i> Itinerary</a></li>
-                <li><a href="#hotelInfo" data-toggle="tab"><i class="icon-home"></i> Hotel</a></li>
+                <li><a href="#hotelInfo" data-toggle="tab"><i class="icon-home"></i> Venue/Hotel</a></li>
                 <li><a href="#mapContainerTab" data-toggle="tab"><i class="icon-map-marker"></i> Map</a></li>
               </ul>
               <!-- tab content -->
