@@ -3,7 +3,7 @@
 <p>This is my personal capstone project for the Nashville Software School. I'm building an app for use by touring musicians; to provide a convenient place to view information regarding all upcoming shows.</p>
 <p>This app can be viewed at: https://tourbook-ich4w.backliftapp.com/</p>
 <p><em>I would also like to thank my mentor Pete Brumm for his patience, direction, and wisdom in helping me build this app.</em></p>
-<h5>This project is currently incomplete.</h5><hr>
+<h5>This project is currently in progress, however, the basic functionality is in working order.</h5><hr>
 <h3>Phase One: <em>(completed)</em></h3>
 <ul>
   <li>Brainstorm and map out the gameplan for phase 1 using Trello.</li>
@@ -27,11 +27,16 @@
   <li>Build "management/admin" data entry aspect of the app, which will allow for two-way functionality.  As shows get booked, this will allow management to populate the app with events and their corresponding information.</li>
   <li>Implement Plugins + APIs with show collection data.</li>
 </ul>
-<h3>Phase Four: <em>(incomplete)</em></h3>
+<h3>Phase Four: <em>(complete)</em></h3>
 <ul>
   <li>Brainstorm and map out the gameplan for phase 4 using Trello.</li>
   <li>Research the usability of a Google API, which will allow the user to view the location of each day's venue and surrounding area.</li>
-  <li>Fix bugs associated with API implementation.</li>
+  <li>Implement geocoding conversion of street address to lat/lng coordinates with user inputted data.</li>
+  <li>Implement Google Maps API to work with each event's converted coordinates.</li>
+</ul>
+<h3>Phase Five: <em>(incomplete)</em></h3>
+<ul>
+  <li>Brainstorm and map out the gameplan for phase 5 using Trello.</li>
   <li>Focus on design aspects of the site.</li>
   <li>Possible jQuery Carousel/Jumbotron implementation.</li>
   <li>Fix UX bugs associated with design.</li>
