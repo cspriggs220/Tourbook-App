@@ -21,13 +21,13 @@
   <li>Create functionality to allow user to click on an event in the calendar, and for a new calendar to appear showing that day's events.</li>
   <li>Fix bugs associated with plugin functionality.</li>
 </ul>
-<h3>Phase Three: <em>(complete)</em></h3>
+<h3>Phase Three: <em>(completed)</em></h3>
 <ul>
   <li>Brainstorm and map out the gameplan for phase 3 using Trello.</li>
   <li>Build "management/admin" data entry aspect of the app, which will allow for two-way functionality.  As shows get booked, this will allow management to populate the app with events and their corresponding information.</li>
   <li>Implement Plugins + APIs with show collection data.</li>
 </ul>
-<h3>Phase Four: <em>(complete)</em></h3>
+<h3>Phase Four: <em>(completed)</em></h3>
 <ul>
   <li>Brainstorm and map out the gameplan for phase 4 using Trello.</li>
   <li>Research the usability of a Google API, which will allow the user to view the location of each day's venue and surrounding area.</li>
